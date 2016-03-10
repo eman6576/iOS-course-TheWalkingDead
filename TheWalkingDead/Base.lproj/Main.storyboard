@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="TheWalkingDead" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -15,11 +17,54 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="0Db-KO-zOT">
+                                <rect key="frame" x="192" y="15" width="216" height="133"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="133" id="7YH-Te-KuF"/>
+                                    <constraint firstAttribute="width" constant="216" id="tua-Mk-KFe"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="shelf" translatesAutoresizingMaskIntoConstraints="NO" id="Edu-w9-q1h">
+                                <rect key="frame" x="0.0" y="521" width="600" height="66"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="66" id="VN0-aA-RaF"/>
+                                </constraints>
+                            </imageView>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PMb-pa-f1P">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <subviews>
+                                    <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="5" translatesAutoresizingMaskIntoConstraints="NO" id="tAq-Ou-6WM">
+                                        <rect key="frame" x="180" y="196" width="240" height="397"/>
+                                    </imageView>
+                                </subviews>
+                            </scrollView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="0Db-KO-zOT" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="15" id="2Ag-0g-BOn"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Edu-w9-q1h" secondAttribute="bottom" constant="14" id="PJO-P7-uwX"/>
+                            <constraint firstItem="PMb-pa-f1P" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="T24-RS-Ga7"/>
+                            <constraint firstItem="PMb-pa-f1P" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="VY0-hF-ucv"/>
+                            <constraint firstAttribute="trailing" secondItem="PMb-pa-f1P" secondAttribute="trailing" id="imf-4e-rgo"/>
+                            <constraint firstAttribute="trailing" secondItem="Edu-w9-q1h" secondAttribute="trailing" id="u5q-wF-DS7"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="PMb-pa-f1P" secondAttribute="bottom" id="uA3-2o-Jp3"/>
+                            <constraint firstItem="0Db-KO-zOT" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ujU-gb-FQB"/>
+                            <constraint firstItem="Edu-w9-q1h" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="wmR-qa-eLw"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="scrollView" destination="PMb-pa-f1P" id="hmv-a8-4Xr"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="455" y="362"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="5" width="368" height="610"/>
+        <image name="logo" width="732" height="340"/>
+        <image name="shelf" width="865" height="114"/>
+    </resources>
 </document>
