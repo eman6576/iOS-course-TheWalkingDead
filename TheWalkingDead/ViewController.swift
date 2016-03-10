@@ -22,7 +22,11 @@ class ViewController: UIViewController {
             let imageView = UIImageView(image: image)
             
             scrollView.addSubview(imageView)
+            
+            imageView.frame = CGRectMake(-WIDTH + (WIDTH * CGFloat(x)), 270, WIDTH, HEIGHT)
         }
+        
+        scrollView.contentSize = CGSizeMake(WIDTH * 5, scrollView.frame.size.height)
     }
 }
 
